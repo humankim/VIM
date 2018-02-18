@@ -6,7 +6,9 @@ set visualbell
 set nocompatible
 syntax on
 set nowrap
-set encoding=utf8
+set nobackup
+set nowritebackup
+"set encoding=utf8 "hangul(menu) broke up in windows
 set fileencoding=utf8
 set langmenu=cp949
 set guifont=Gulimche:h12:cHANGEUL
