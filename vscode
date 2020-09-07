@@ -26,3 +26,51 @@
   
 2. C/C++ 개발환경 셋팅
 https://goodgodgd.github.io/ian-flow/archivers/vscode-tutorial
+   
+   2-1. tasks.json (linux)
+        : 위 링크 참조
+   2-2. tasks.json (windows)
+   {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": {
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "type": "shell",
+            "label": "execute",
+            "command": "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+    ]
+}
