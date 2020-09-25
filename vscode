@@ -30,6 +30,7 @@ https://goodgodgd.github.io/ian-flow/archivers/vscode-tutorial
    2-1. tasks.json (linux)
         : 위 링크 참조
    2-2. tasks.json (windows)
+   아래 파일과 같이 수정 전, MingW 설치 및 시스템 패스(MingW/bin) 설정
    {
     "version": "2.0.0",
     "tasks": [
