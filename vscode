@@ -75,3 +75,15 @@ https://goodgodgd.github.io/ian-flow/archivers/vscode-tutorial
         },
     ]
 }
+
+   2.3 단축키
+     : File - Preference - Keyboard shortcuts
+       Open JSON (keybindings.json) 오른쪽 상단 위치
+       [
+       //컴파일
+       { "key": "ctrl+alt+c", "command": "workbench.action.tasks.build" },
+    
+       //실행
+       { "key": "ctrl+alt+r", "command": "workbench.action.tasks.test" }
+       ]
+      
